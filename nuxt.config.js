@@ -35,7 +35,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-purgecss'],
+  modules: ['nuxt-purgecss', 'nuxt-svg'],
 
   /*
    ** Configure PurgeCSS rules
