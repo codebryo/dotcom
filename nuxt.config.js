@@ -1,3 +1,4 @@
+import path from 'path'
 import pkg from './package'
 
 export default {
@@ -24,7 +25,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/tailwind.css'],
+  css: ['~/assets/sass/tailwind.sass', '~/assets/sass/style.sass'],
 
   /*
    ** Plugins to load before mounting the App
@@ -34,7 +35,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['nuxt-purgecss'],
+
+  /*
+   ** Configure PurgeCSS rules
+   */
+  purgeCSS: {},
 
   /*
    ** Build configuration
@@ -52,6 +58,14 @@ export default {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+
+    extractCSS: true,
+
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
       }
     }
   }
