@@ -10,3 +10,21 @@ html
 
 body
   @apply bg-coal font-serif text-white text-left
+
+a
+  @apply underline inline-block leading-tight px-1
+  transition: color 400ms ease-in-out, background 300ms ease-in-out
+
+  &:hover
+    @apply text-coal bg-yellow
+
+
+h1,
+h2
+  @apply font-sans font-bold
+
+h1
+  font-size: 2.5rem
+
+h2
+  font-size: 2rem

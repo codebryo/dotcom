@@ -1,19 +1,12 @@
 <template>
   <Content>
-    <p>
-      Hello there, <br />
-      welcome to my little space in the world wide web. <br />
-      Here I write about various things, and share good music.
-    </p>
-
-    <li>
-      BlogPosts ...
-    </li>
+    <h1>Latest Blogposts</h1>
   </Content>
 </template>
 
 <script>
 import Content from '~/components/content'
+
 export default {
   components: {
     Content
