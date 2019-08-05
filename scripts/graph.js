@@ -8,44 +8,49 @@ const PATHS = {
   STATIC: path.join(__dirname, '..', 'static')
 }
 
-const graph = {}
+async function assembleGraphData(inputPath) {
+  const files = await fs.readdir(inputPath, { withFileTypes: true })
+  const filesReducer = async (accumulator, file) => {
+    const fileNameWithoutExtension = path.basename(
+      file.name,
+      path.extname(file.name)
+    )
 
-async function asyncForEach(array, callback) {
-  for (let index = 0; index < array.length; index++) {
-    await callback(array[index], index, array)
+    const fileStream = await fs.readFile(
+      path.join(inputPath, '/', file.name),
+      'utf8'
+    )
+    // Turn the raw .md content into a JSON object
+    const content = fm(fileStream)
+    // assign it to the main graph object
+    return (accumulator[fileNameWithoutExtension] = content)
   }
-}
 
-async function collectPosts(inputPath) {
-  const data = {}
   try {
-    const files = await fs.readdir(inputPath, { withFileTypes: true })
-
-    await asyncForEach(files, async file => {
-      const fileNameWithoutExtension = path.basename(file, path.extname(file))
-      const fileStream = await fs.readFile(
-        path.join(inputPath, '/', file),
-        'utf8'
-      )
-      const content = fm(fileStream)
-      data[fileNameWithoutExtension] = content
-    })
-    return data
+    return files.reduce(filesReducer, {})
   } catch (err) {
     console.error(err)
   }
 }
 
-async function createGraphFile() {
-  const files = await collectPosts(PATHS.CONTENT)
-  graph.posts = files
+async function writeGraphFile() {
+  const graphData = await assembleGraphData(PATHS.CONTENT)
+  console.log(graphData)
 
   try {
-    await fs.writeFile(`${PATHS.STATIC}/graph.json`, JSON.stringify(graph))
+    await fs.writeFile(`${PATHS.STATIC}/graph.json`, JSON.stringify(graphData))
     console.log('Graph file generated!')
   } catch (err) {
     console.error(err)
   }
 }
 
-createGraphFile()
+// async function createGraphFile() {
+//   const files = await collectPosts(PATHS.CONTENT)
+//   graph.posts = files
+
+// }
+
+// const graphData = assembleGraphData(PATHS.CONTENT)
+// console.log(graphData)
+writeGraphFile()
