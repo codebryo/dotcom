@@ -1,8 +1,9 @@
 ---
 title: Hello World
-published: 06.06.2019
+published: 06.08.2019
+updated: 06.08.2019
 tags:
-  - test
+  - thoughts
 ---
 
 Hi there, it's been a while. With been a while, I don't even mean the lack of blogging I did over the last years, where I always said I'll come around to swamp everyone with high value content. No — I actually refer to this page.
