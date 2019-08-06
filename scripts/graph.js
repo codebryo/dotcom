@@ -35,7 +35,6 @@ async function assembleGraphData(inputPath) {
 
 async function writeGraphFile() {
   const graphData = await assembleGraphData(PATHS.CONTENT)
-  console.log(graphData)
 
   try {
     await fs.writeFile(`${PATHS.STATIC}/graph.json`, JSON.stringify(graphData))
@@ -45,12 +44,4 @@ async function writeGraphFile() {
   }
 }
 
-// async function createGraphFile() {
-//   const files = await collectPosts(PATHS.CONTENT)
-//   graph.posts = files
-
-// }
-
-// const graphData = assembleGraphData(PATHS.CONTENT)
-// console.log(graphData)
 writeGraphFile()
