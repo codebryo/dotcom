@@ -23,9 +23,9 @@ async function assembleGraphData(inputPath) {
     // Turn the raw .md content into a JSON object
     const content = fm(fileStream)
     // assign it to the main graph object
-    return (accumulator[fileNameWithoutExtension] = content)
+    accumulator[fileNameWithoutExtension] = content
+    return accumulator
   }
-
   try {
     return files.reduce(filesReducer, {})
   } catch (err) {
@@ -34,12 +34,14 @@ async function assembleGraphData(inputPath) {
 }
 
 async function writeGraphFile() {
-  const graphData = await assembleGraphData(PATHS.CONTENT)
+  const graph = {
+    posts: await assembleGraphData(PATHS.CONTENT)
+  }
 
   try {
     await fs.writeFile(
       `${PATHS.STATIC}/graph.json`,
-      JSON.stringify(graphData, null, 4)
+      JSON.stringify(graph, null, 4)
     )
     console.log('Graph file generated!')
   } catch (err) {
