@@ -1,7 +1,7 @@
 <template>
-  <div class="content font-serif p-4 mt-20">
+  <div class="content font-serif p-4">
     <slot></slot>
-    <footer>
+    <footer class="text-gray-600">
       <p>copyright 2019 -- Roman Kuba</p>
     </footer>
   </div>
@@ -11,6 +11,7 @@
 .content
   @apply w-full
   max-width: 45em
+  margin-top: 200px
 
 footer
   padding: 8em 0 3em

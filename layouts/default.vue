@@ -8,14 +8,14 @@
       </div>
       <ul class="text-right flex-row flex font-sans">
         <li class="p-4">
-          <a href="#twitter">twitter</a>
+          <a href="https://twitter.com/codebryo" target="_blank">twitter</a>
         </li>
         <li class="p-4">
-          <a href="#github">github</a>
+          <a href="https://github.com/codebryo" target="_blank">github</a>
         </li>
-        <li class="p-4">
+        <!-- <li class="p-4">
           <a href="#rss">rss</a>
-        </li>
+        </li> -->
       </ul>
     </header>
     <div class="flex justify-center">
