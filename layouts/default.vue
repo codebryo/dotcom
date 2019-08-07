@@ -24,7 +24,16 @@
   </div>
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
 #logo
-  width: 100px
+  width: 150px
+  min-width: 80px
+
+header
+  background-color: rgba(#272727, .8)
+  position: fixed
+  width: 100%
+  max-width: 80em
+  transform: translateX(-50%)
+  left: 50%
 </style>

@@ -20,7 +20,7 @@ Career wise I do not regret the decision at all. It did not hurt me in any way a
 
 I wanted to relaunch it actually a few times already, but one of the things with developers personal websites is the fact that it's never finished. The failed attempts went like this:
 
-- Make a awesome design
+- Make an awesome design
 - Start building the page
 - Figuring out that actually I do not have interesting content prepared
 - Changing the design
