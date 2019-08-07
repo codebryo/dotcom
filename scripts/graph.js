@@ -37,7 +37,10 @@ async function writeGraphFile() {
   const graphData = await assembleGraphData(PATHS.CONTENT)
 
   try {
-    await fs.writeFile(`${PATHS.STATIC}/graph.json`, JSON.stringify(graphData))
+    await fs.writeFile(
+      `${PATHS.STATIC}/graph.json`,
+      JSON.stringify(graphData, null, 4)
+    )
     console.log('Graph file generated!')
   } catch (err) {
     console.error(err)
