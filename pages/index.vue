@@ -10,8 +10,6 @@ import Content from '~/components/content'
 import Post from '~/components/post'
 import graph from '~/static/graph.json'
 
-console.log(graph.posts)
-
 export default {
   components: {
     Content,

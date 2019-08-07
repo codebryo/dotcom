@@ -8,6 +8,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import MD from 'markdown-js'
 
 export default {
