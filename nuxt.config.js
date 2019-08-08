@@ -14,7 +14,12 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#272727' },
       { name: 'theme-color', content: '#272727' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Roman Kubas personal blog full of ideas, learnings and what ever gets put on this page eventually. Have fun discovering.'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
