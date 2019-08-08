@@ -1,7 +1,7 @@
 ---
 title: Hello World
 published: 06.08.2019
-updated: 06.08.2019
+updated: 08.08.2019
 tags:
   - thoughts
 ---
@@ -12,8 +12,8 @@ It's actually embarrassing that I, as a member of the web dev community, didn't 
 
 So, what happened?
 
-The short answer — life happened!
-The longer answer might be  a little more complex but probably sounds familiar to many other developers out there. The first big change was when I switched from being an self-employed jack-of-all-traits web guy to a full time job. I didn't switch, because self employment didn't work out. Nope. I switched because I had the opportunity to join a small startup that just recently received funding, and I was looking forward to work with a team of awesome individuals.
+The short answer — life happened! (Became a dad, my wife and I built a house, work...)
+The longer answer might be  a little more complex but probably sounds familiar to many other developers out there. The first big change was when I switched from being a self-employed jack-of-all-traits web guy to a full time job. I didn't switch because self employment didn't work out. Nope. I switched because I had the opportunity to join a small startup that just recently received funding, and I was looking forward to work with a team of awesome individuals.
 While my personal website was the number one advertising channel for me to engage with new clients, I suddenly didn't need it anymore. The page got neglected, the design became outdated fast and I did not have the resources or even motivation to keep it updated. I did not really have a blog, but merely a portfolio. With no new clients, no new projects would show up. I felt pretty embarrassed for the page. And with the mail of the next payment period coming up in my inbox, I decided to pull the plug. Only for now I thought.... well. As said that was 4 years ago.
 
 Career wise I do not regret the decision at all. It did not hurt me in any way and I had an incredibly interesting journey since then, and I will write more about this in the future. For now lets talk about this page where you read this blog post on.
@@ -36,3 +36,5 @@ This first blog post marks a new chapter for me. I decided to build this page as
 
 This page will also be fully open sourced, as I built it on awesome OSS software.
 And with this post, I can finally say again: "Hello World!"
+
+Page source: [github.com/codebryo/dotcom](https://github.com/codebryo/dotcom)
