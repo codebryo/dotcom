@@ -1,6 +1,12 @@
 import path from 'path'
 import pkg from './package'
 
+const defaults = {
+  title: 'Codebryo.com - Blog, Tech, More',
+  description:
+    'Roman Kubas personal blog full of ideas, learnings and what ever gets put on this page eventually. Have fun discovering.'
+}
+
 export default {
   mode: 'universal',
 
@@ -8,7 +14,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: defaults.title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,9 +23,14 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Roman Kubas personal blog full of ideas, learnings and what ever gets put on this page eventually. Have fun discovering.'
-      }
+        content: defaults.description
+      },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:creator', content: 'codebryo' },
+      { property: 'og:url', content: 'https://codebryo.com' },
+      { property: 'og:title', content: defaults.title },
+      { property: 'og:description', content: defaults.description },
+      { property: 'og:image', content: '/ogdefault.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -1,5 +1,7 @@
 # dotcom
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/323b39dc-6183-45bb-b6e9-341e8a95a6af/deploy-status)](https://app.netlify.com/sites/quizzical-babbage-0c32a4/deploys)
+
 > Personal Homepage
 
 ## Build Setup
