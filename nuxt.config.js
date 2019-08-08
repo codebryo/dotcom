@@ -30,7 +30,7 @@ export default {
       { property: 'og:url', content: 'https://codebryo.com' },
       { property: 'og:title', content: defaults.title },
       { property: 'og:description', content: defaults.description },
-      { property: 'og:image', content: '/ogdefault.jpg' }
+      { property: 'og:image', content: 'https://codebryo.com/ogdefault.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
