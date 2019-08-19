@@ -1,5 +1,6 @@
 ---
 title: Hello World
+slug: 438da9e4-a2bc-4e8c-a248-b24a142c8494-hello-world
 published: 06.08.2019
 updated: 08.08.2019
 tags:
