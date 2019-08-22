@@ -1,10 +1,25 @@
 import path from 'path'
 import pkg from './package'
+const graph = require('./static/graph.json')
 
 const defaults = {
   title: 'Codebryo.com - Blog, Tech, More',
   description:
     'Roman Kubas personal blog full of ideas, learnings and what ever gets put on this page eventually. Have fun discovering.'
+}
+
+function customRoutes() {
+  const postRoutes = []
+  for (const [key, value] of Object.entries(graph.posts)) {
+    postRoutes.push({
+      path: `/p/${value.attributes.slug}`,
+      props: {
+        id: key
+      }
+    })
+  }
+
+  return [...postRoutes]
 }
 
 export default {
@@ -107,5 +122,9 @@ export default {
         tailwindcss: path.resolve(__dirname, './tailwind.config.js')
       }
     }
+  },
+
+  generate: {
+    routes: customRoutes()
   }
 }
