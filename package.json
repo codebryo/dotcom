@@ -5,7 +5,7 @@
   "author": "Roman Kuba",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node scripts/graph.js && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "node scripts/graph.js && nuxt generate",
