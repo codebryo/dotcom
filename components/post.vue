@@ -4,7 +4,13 @@
       <h1>{{ title }}</h1>
     </header>
     <div class="meta">
-      Published {{ published }} --
+      <nuxt-link
+        :to="`/p/${slug}`"
+        class="source"
+        title="Unique url for this post"
+        >⛓</nuxt-link
+      >
+      -- Published {{ published }} --
       <span v-for="tag in tags" :key="tag" class="tag" v-text="tag" />
     </div>
     <article v-html="content" />
@@ -38,4 +44,10 @@ export default {
 
 .tag
   @apply inline-block p-1 border rounded border-gray-800 border-solid
+
+.source
+  @apply no-underline not-italic
+  &:hover
+    background: none
+
 </style>
