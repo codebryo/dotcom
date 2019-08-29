@@ -7,7 +7,7 @@
     <div class="text-gray-700 italic py-2">
       <nuxt-link
         :to="`/p/${slug}`"
-        class="source"
+        class="not-italic no-underline hover:no-underline hover:bg-transparent"
         title="Unique url for this post"
         >⛓</nuxt-link
       >
@@ -52,9 +52,10 @@ export default {
 
 <style lang="sass">
 
-.source
-  @apply no-underline not-italic
-  &:hover
-    background: none
+article
+  p
+    @apply my-2
+  h2
+    @apply mt-8 mb-4
 
 </style>

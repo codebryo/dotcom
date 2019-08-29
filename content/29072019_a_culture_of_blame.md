@@ -27,6 +27,8 @@ For the Amazon forrest, the reason lies deeply nested in the political situation
 
 At my wife's workplace it's similar. The issue happened not because someone made a mistake, but the system at that company is incredibly unorganised and somehow this extra order ended up in the production list as it always would, and the whole team worked through it as always. The main issue could potentially boiled down to the exec level and their unwillingness to put better processes into place and tackle the root cause of the behaviour. Instead they tried to find an individual who's responsible for it, so that in future people always have to question their next actions and confirm if it should actually be done.
 
+## The Engineers Perspective
+
 Let's get this whole topic into the perspective of software development and engineering teams. That's another field I discover blame regularly. From various friends at companies, to my own experiences, I know how fast this can happen.
 
 I remember personally when I blamed someone for a mistake they've made that basically impacted production. A feature I lead was rolled out in an not ideal fashion, and eventually we had to extinguish a few fires as a rollback wasn't an option. The whole team pulled together and we managed to fix everything in a few hours. Eventually the impact for customers was not as bad as felt initially, but when something goes wrong there's a lot of stress and everything feels horrible and you act under pressure. When talking to my manager back then I blamed one person for kicking it all off and causing all this stress.
