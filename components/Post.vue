@@ -3,6 +3,7 @@
     <header>
       <h1>{{ title }}</h1>
     </header>
+
     <div class="text-gray-700 italic py-2">
       <nuxt-link
         :to="`/p/${slug}`"
@@ -13,6 +14,14 @@
       -- Published {{ published }} --
       <Tags :tags="tags" />
     </div>
+
+    <figure v-if="image" class="my-2">
+      <img :src="image.url" :alt="title" />
+      <figcaption class="text-gray-700 italic text-sm text-right">
+        Photo by: <span v-html="image.author" />
+      </figcaption>
+    </figure>
+
     <article v-html="content" />
   </div>
 </template>

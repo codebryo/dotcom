@@ -1,6 +1,6 @@
 <template>
   <Content>
-    <Post v-cloak :post="post" />
+    <Post v-cloak :post="post" class="mb-12" />
   </Content>
 </template>
 
