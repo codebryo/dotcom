@@ -10,7 +10,8 @@ const PATHS = {
 
 async function assembleGraphData(inputPath) {
   const files = await fs.readdir(inputPath, { withFileTypes: true })
-  const filesReducer = async (accumulator, file) => {
+  const filesReducer = async (accumulatorPromise, file) => {
+    const accumulator = await accumulatorPromise
     const fileNameWithoutExtension = path.basename(
       file.name,
       path.extname(file.name)
@@ -27,7 +28,7 @@ async function assembleGraphData(inputPath) {
     return accumulator
   }
   try {
-    return files.reduce(filesReducer, {})
+    return await files.reduce(filesReducer, Promise.resolve({}))
   } catch (err) {
     console.error(err)
   }
