@@ -3,7 +3,7 @@
     <header>
       <h1>{{ title }}</h1>
     </header>
-    <div class="meta">
+    <div class="text-gray-700 italic py-2">
       <nuxt-link
         :to="`/p/${slug}`"
         class="source"
@@ -11,7 +11,7 @@
         >⛓</nuxt-link
       >
       -- Published {{ published }} --
-      <span v-for="tag in tags" :key="tag" class="tag" v-text="tag" />
+      <Tags :tags="tags" />
     </div>
     <article v-html="content" />
   </div>
@@ -20,6 +20,7 @@
 <script>
 /* eslint-disable */
 import MD from 'markdown-js'
+import Tags from '~/components/tags'
 
 export default {
   props: {
@@ -28,6 +29,8 @@ export default {
       default: () => {}
     }
   },
+
+  components: { Tags },
 
   data() {
     return {
@@ -39,11 +42,6 @@ export default {
 </script>
 
 <style lang="sass">
-.meta
-  @apply text-gray-600 italic py-2
-
-.tag
-  @apply inline-block p-1 border rounded border-gray-800 border-solid
 
 .source
   @apply no-underline not-italic
